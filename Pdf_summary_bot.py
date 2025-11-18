@@ -39,11 +39,11 @@ async def handle_pdf(update: Update, context: ContextTypes.DEFAULT_TYPE):
     file = await update.message.document.get_file()
     file_path = "temp.pdf"
     await file.download_to_drive(file_path)
-    await update.message.reply_text("📘 Extracting and summarizing your PDF... please wait ⏳")
+    await update.message.reply_text("📘 Chill Kiasi nikam⏳")
 
     text = extract_text_from_pdf(file_path)
     if not text.strip():
-        await update.message.reply_text("❌ Sorry, I couldn’t extract any text from that file.")
+        await update.message.reply_text("❌ Hii file haiwezi.")
         return
 
     summary = summarize_text(text)
